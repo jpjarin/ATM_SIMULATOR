@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Validate username
     if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter a username.";
+        $username_err = "Please create a CID.";
     } else{
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE username = :username";
@@ -90,8 +90,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Attempt to execute the prepared statement
             if($stmt->execute()){
-                // Redirect to login page
-                header("location: login.php");
+                session_start();
+                $_SESSION['username'] = $username;      
+                header("location: welcome.php");
             } else{
                 echo "Something went wrong. Please try again later.";
             }
