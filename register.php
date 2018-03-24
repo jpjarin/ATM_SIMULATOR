@@ -1,7 +1,7 @@
 <?php
 // Include config file
 require_once 'controllers/config.php';
-include 'controllers/register_control.php';
+require 'controllers/register_control.php';
 ?>
  
 <!DOCTYPE html>
@@ -9,6 +9,7 @@ include 'controllers/register_control.php';
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
+    <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/myStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="css/form_style.css">

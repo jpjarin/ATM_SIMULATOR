@@ -1,12 +1,13 @@
 <?php
 require_once 'controllers/config.php';
-include 'controllers/login_control.php';
+require 'controllers/login_control.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>ATM SIMULATOR</title>
+    <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/myStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="css/form_style.css">

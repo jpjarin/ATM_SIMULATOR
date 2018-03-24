@@ -124,3 +124,8 @@
 .forgot-password:focus{
     color: rgb(12, 97, 33);
 }
+.form-control::-webkit-input-placeholder { color: #a94442; opacity: 1; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: #a94442; opacity: 1; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: #a94442; opacity: 1; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: #a94442; opacity: 1; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: #a94442; opacity: 1; }  /* Microsoft Edge */

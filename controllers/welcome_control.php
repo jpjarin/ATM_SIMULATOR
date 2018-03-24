@@ -5,7 +5,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   exit;
 }
 
-$sql = "SELECT fname , lname FROM users WHERE username = :username " ;
+$sql = "SELECT * FROM users WHERE username = :username " ;
 
 $q = $pdo->prepare($sql);
 $q->execute([':username'=>$_SESSION['username']]);
