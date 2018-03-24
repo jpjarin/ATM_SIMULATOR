@@ -22,13 +22,13 @@ require 'controllers/register_control.php';
         <form class="form-sigin" name="myform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($fname_err)) ? 'has-error' : ''; ?>">
                 <label>First Name</label>
-                <input name="fname" type="text" class="form-control" value="<?php echo $fname; ?>" placeholder="<?php echo $fname_err; ?>">
+                <input name="fname" onfocus="this.value=''" type="text" class="form-control" value="<?php echo $fname; ?>" placeholder="<?php echo $fname_err; ?>">
                 
             </div>
             
             <div class="form-group <?php echo (!empty($lname_err)) ? 'has-error' : ''; ?>">
                 <label>Last Name</label>
-                <input name="lname" type="text" class="form-control" value="<?php echo $lname; ?>" placeholder="<?php echo $lname_err; ?>">
+                <input name="lname" onfocus="this.value=''" type="text" class="form-control" value="<?php echo $lname; ?>" placeholder="<?php echo $lname_err; ?>">
                 
             </div>
             
@@ -38,17 +38,18 @@ require 'controllers/register_control.php';
                 <input type="hidden" name="length" value="5">
                 <input readonly name="username" type="text" class="form-control" value="<?php echo $username; ?>" placeholder="<?php echo $username_err; ?>">
                 <input type="button" class="btn btn-info" value="Generate" onClick="generate();">
+   
                 
-                
-            </div>    
+                </div>
+            </div>   
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>4-Digit PIN</label>
-                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>" placeholder="<?php echo $password_err; ?>">
+                <input type="password" onfocus="this.value=''" name="password" class="form-control" value="<?php echo $password; ?>" placeholder="<?php echo $password_err; ?>">
                 
             </div>
             <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
                 <label>Confirm PIN</label>
-                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>" placeholder="<?php echo $confirm_password_err; ?>">
+                <input type="password" onfocus="this.value=''" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>" placeholder="<?php echo $confirm_password_err; ?>">
                
             </div>
             <div class="form-group">

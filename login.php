@@ -21,12 +21,12 @@ require 'controllers/login_control.php';
         <form class="form-signin" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>CID</label>
-                <input type="text" name="username"class="form-control" value="<?php echo $username; ?>" placeholder="<?php echo $username_err; ?>">
+                <input type="text" onfocus="this.value=''" name="username"class="form-control" value="<?php echo $username; ?>" placeholder="<?php echo $username_err; ?>">
                 
             </div>    
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>PIN</label>
-                <input type="password" name="password" class="form-control" placeholder="<?php echo $password_err; ?>">
+                <input type="password" onfocus="this.value=''" name="password" class="form-control" placeholder="<?php echo $password_err; ?>">
                 
                 
             </div>
