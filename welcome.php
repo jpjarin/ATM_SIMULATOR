@@ -19,14 +19,35 @@ include 'controllers/welcome_control.php';
         <h1>Welcome, <b><?php echo htmlspecialchars($row['fname']); ?></b>
             <b><?php echo htmlspecialchars($row['lname']); ?></b>.</h1>
             <hr>
-            <button type="button" class="center btn btn-primary btn-block">Deposit</button>
+            <button type="button" class="center btn btn-primary btn-block" 
+                    data-toggle="modal" data-target="#depositModal">Deposit</button>
             <button type="button" class="center btn btn-info btn-block">Withdraw</button>
             <hr>
             <p><a href="logout.php" class="btn btn-danger btn-block">Sign Out</a></p>
     </div>
     </div>
     
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- Modal-->
+        <div id="depositModal" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Deposit</h4>
+              </div>
+              <div class="modal-body">
+                  
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+
+          </div>
+        </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -21,34 +21,34 @@ include 'controllers/register_control.php';
         <form class="form-sigin" name="myform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($fname_err)) ? 'has-error' : ''; ?>">
                 <label>First Name</label>
-                <input name="fname" type="text" class="form-control" value="<?php echo $fname; ?>">
-                <span class="help-block"><?php echo $fname_err; ?></span>
+                <input name="fname" type="text" class="form-control" value="<?php echo $fname; ?>" placeholder="<?php echo $fname_err; ?>">
+                
             </div>
             
             <div class="form-group <?php echo (!empty($lname_err)) ? 'has-error' : ''; ?>">
                 <label>Last Name</label>
-                <input name="lname" type="text" class="form-control" value="<?php echo $lname; ?>">
-                <span class="help-block"><?php echo $lname_err; ?></span>
+                <input name="lname" type="text" class="form-control" value="<?php echo $lname; ?>" placeholder="<?php echo $lname_err; ?>">
+                
             </div>
             
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>CID</label>
                 <div class="form-inline">
                 <input type="hidden" name="length" value="5">
-                <input readonly name="username" type="text" class="form-control" value="<?php echo $username; ?>">
+                <input readonly name="username" type="text" class="form-control" value="<?php echo $username; ?>" placeholder="<?php echo $username_err; ?>">
                 <input type="button" class="btn btn-info" value="Generate" onClick="generate();">
-                <span class="help-block"><?php echo $username_err; ?></span></div>
+                
                 
             </div>    
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>4-Digit PIN</label>
-                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-                <span class="help-block"><?php echo $password_err; ?></span>
+                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>" placeholder="<?php echo $password_err; ?>">
+                
             </div>
             <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
                 <label>Confirm PIN</label>
-                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
-                <span class="help-block"><?php echo $confirm_password_err; ?></span>
+                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>" placeholder="<?php echo $confirm_password_err; ?>">
+               
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">

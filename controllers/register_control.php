@@ -53,8 +53,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate password
     if(empty(trim($_POST['password']))){
         $password_err = "Please enter a PIN.";     
-    } elseif(strlen(trim($_POST['password'])) <> 4 ){
-        $password_err = "Pin must be 4 characters.";
+    } elseif(strlen(trim($_POST['password'])) <> 4 || filter_var($_POST['password'], FILTER_VALIDATE_INT) === 0 || filter_var($_POST['password'], FILTER_VALIDATE_INT)==false){
+        $password_err = "Pin must be 4-Digit number.";
     } else{
         $password = trim($_POST['password']);
     }
