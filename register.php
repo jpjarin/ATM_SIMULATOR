@@ -53,7 +53,6 @@ include 'controllers/register_control.php';
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-default" value="Reset">
-                <div class="loader"></div>
             </div>
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
@@ -61,6 +60,6 @@ include 'controllers/register_control.php';
     </div>
     <script src="js/usernameGenerator.js"></script>   
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>
