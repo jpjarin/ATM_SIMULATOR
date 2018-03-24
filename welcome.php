@@ -48,7 +48,7 @@ require 'controllers/transaction.php';
               </div>
               <div class="modal-footer">
                   <div class="text-center">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal">Close</button>
               </div>
               </div>
             </div>
@@ -63,13 +63,15 @@ require 'controllers/transaction.php';
             <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Deposit</h4>
               </div>
               <div class="modal-body">
                   
               </div>
               <div class="modal-footer">
+                  <div class="text-center">
+                  <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal">Close</button>
+              </div>
               </div>
             </div>
 
@@ -83,13 +85,21 @@ require 'controllers/transaction.php';
             <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Withdraw</h4>
+                <h4 class="modal-title">How much will you withdraw?</h4>
               </div>
               <div class="modal-body">
                   
+                  <form method="post">
+                      <div class="form-group"><br>
+                          <input name="withdraw" placeholder="" type="" class="form-control input-large">
+                      </div>
+                  </form>
+                  
               </div>
               <div class="modal-footer">
+                  <div class="text-center">
+                  <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal">Close</button>
+              </div>
               </div>
             </div>
 
