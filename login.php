@@ -16,8 +16,8 @@ require 'controllers/login_control.php';
     
     <div class="container">
         <div class="card card-container">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
+            <h2 class="text-center">Login</h2>
+        <p class="text-center">Please fill in your credentials to login.</p>
         <form class="form-signin" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>CID</label>
@@ -26,7 +26,7 @@ require 'controllers/login_control.php';
             </div>    
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>PIN</label>
-                <input type="password" onfocus="this.value=''" name="password" class="form-control" placeholder="<?php echo $password_err; ?>">
+                <input type="password" onfocus="this.value=''"name="password" class="form-control" maxlength="4" placeholder="<?php echo $password_err; ?>">
                 
                 
             </div>

@@ -17,8 +17,8 @@ require 'controllers/register_control.php';
 <body>
     <div class="container">
         <div class="card card-container">
-        <h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</p>
+            <h2 class="text-center">Sign Up</h2>
+            <p class="text-center">Please fill this form to create an account.</p>
         <form class="form-sigin" name="myform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($fname_err)) ? 'has-error' : ''; ?>">
                 <label>First Name</label>
@@ -44,12 +44,12 @@ require 'controllers/register_control.php';
             </div>   
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>4-Digit PIN</label>
-                <input type="password" onfocus="this.value=''" name="password" class="form-control" value="<?php echo $password; ?>" placeholder="<?php echo $password_err; ?>">
+                <input type="password" onfocus="this.value=''" name="password" class="form-control" maxlength="4" value="<?php echo $password; ?>" placeholder="<?php echo $password_err; ?>">
                 
             </div>
             <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
                 <label>Confirm PIN</label>
-                <input type="password" onfocus="this.value=''" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>" placeholder="<?php echo $confirm_password_err; ?>">
+                <input type="password" onfocus="this.value=''" name="confirm_password" class="form-control" maxlength="4" value="<?php echo $confirm_password; ?>" placeholder="<?php echo $confirm_password_err; ?>">
                
             </div>
             <div class="form-group">
