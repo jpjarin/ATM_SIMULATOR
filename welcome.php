@@ -63,15 +63,20 @@ require 'controllers/transaction.php';
             <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">Deposit</h4>
+                <h4 class="modal-title">How much will you deposit?</h4>
               </div>
               <div class="modal-body">
                   
                   <form method="post">
-                      <div class="form-group"><br>
-                          <input id="deposit" name="deposit" type="number" step="100" min="100" 
-                                 autofocus="" class="form-control input-large">
-                      </div>
+                      <div class="form-group"><br><div class="input-group">
+                          <span class="input-group-addon"><i>₱</i></span>
+                          <div class="quantity">
+                          <input id="deposit" name="deposit" type="number" step="100" min="0" 
+                                 autofocus="" class="form-control input-lg">
+                          </div>
+                          </div>
+                          <div class="text-center"><br><button type="submit" class="btn btn-primary">Deposit</button>
+                          </div></div>
                   </form>
                   
               </div>
@@ -97,10 +102,12 @@ require 'controllers/transaction.php';
               <div class="modal-body">
                   
                   <form method="post">
-                      <div class="form-group"><br>
-                          <input id="withdraw" name="withdraw" placeholder="" type="number" step="100" min="100" 
-                                 autofocus="" onkeydown="return true;" class="form-control input-large">
-                          <div class="text-center"><br><input type="submit" class="btn btn-primary">
+                      <div class="form-group"><br><div class="input-group">
+                          <span class="input-group-addon"><i>₱</i></span>
+                          <input id="withdraw" name="withdraw" placeholder="" type="number" step="100" min="0" 
+                                 autofocus="" class="form-control input-lg"></div>
+                          <div class="text-center"><br><button type="submit" class="btn btn-primary">Withdraw</button>
+                          </div>
                       </div>
                   </form>
                   
