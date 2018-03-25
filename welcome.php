@@ -42,13 +42,13 @@ require 'controllers/transaction.php';
                 
                 <h3 class="modal-title text-center">Account Balance</h3>
               </div>
-              <div class="modal-body">
+                <div class="modal-body"><br>
                   <div class="well"><h4>₱ <?php echo number_format($row['balance'],2); ?></h4>
                   </div>
               </div>
               <div class="modal-footer">
                   <div class="text-center">
-                  <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-link btn-xs" data-dismiss="modal">Close</button>
               </div>
               </div>
             </div>
@@ -67,10 +67,17 @@ require 'controllers/transaction.php';
               </div>
               <div class="modal-body">
                   
+                  <form method="post">
+                      <div class="form-group"><br>
+                          <input id="deposit" name="deposit" type="number" step="100" min="100" 
+                                 autofocus="" class="form-control input-large">
+                      </div>
+                  </form>
+                  
               </div>
               <div class="modal-footer">
                   <div class="text-center">
-                  <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-link btn-xs" data-dismiss="modal">Close</button>
               </div>
               </div>
             </div>
@@ -91,23 +98,26 @@ require 'controllers/transaction.php';
                   
                   <form method="post">
                       <div class="form-group"><br>
-                          <input name="withdraw" placeholder="" type="" class="form-control input-large">
+                          <input id="withdraw" name="withdraw" placeholder="" type="number" step="100" min="100" 
+                                 autofocus="" onkeydown="return true;" class="form-control input-large">
+                          <div class="text-center"><br><input type="submit" class="btn btn-primary">
                       </div>
                   </form>
                   
               </div>
               <div class="modal-footer">
                   <div class="text-center">
-                  <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-link btn-xs" data-dismiss="modal">Close</button>
               </div>
               </div>
             </div>
 
           </div>
-        </div>
+          </div></div>
     
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/blur.js"></script>
 </body>
 </html>
